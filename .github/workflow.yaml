@@ -1,15 +1,12 @@
 name: Config Generator
-on:
-  pull_request:
-    branches: [ main ]
-
+on: workflow_dispatch
 jobs:
   config-generator:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
 
       - name: build other repo
-        run: echo "building $USER"
+        run: echo "building   $USER"
